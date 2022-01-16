@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>You first Spring application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="/add" method="POST">
+    <p>Let's add a User.</p>
+
+    <div>
+        <label for="userName">Username:</label>
+        <input name="userName" id="userName" >
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input name="email" id="email" >
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input name="password" id="password" >
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input name="phone" id="phone" >
+    </div>
+    <div>
+        <button>Add User</button>
+    </div>
+</form>
+
+<form action="/list" method="GET">
+    <button>List User</button>
+</form>
+</body>
+</html>
