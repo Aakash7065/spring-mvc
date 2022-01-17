@@ -13,7 +13,7 @@ public class UserController {
     public String addUser(@RequestParam("userName") String userName,
                           @RequestParam(name= "email", required = true) String userEmail,
                           @RequestParam("password") String userPassword, @RequestParam("phone") String phone) {
-        User customer = new User();
+        Customer customer = new Customer();
         customer.setUserName(userName);
         customer.setEmail(userEmail);
         customer.setPassword(userPassword);
@@ -23,12 +23,12 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public Iterable<User> getCustomers() {
+    public Iterable<Customer> getCustomers() {
         return userRepository.findAll();
     }
 
     @GetMapping("/find/{id}")
-    public User findCustomerById(@PathVariable Integer id) {
+    public Customer findCustomerById(@PathVariable Integer id) {
         return userRepository.findUsersById(id);
     }
 }
